@@ -1,9 +1,5 @@
-const SimpleStorage = artifacts.require("SimpleStorage");
-const TutorialToken = artifacts.require("TutorialToken");
-const ComplexStorage = artifacts.require("ComplexStorage");
+const UbrisToken = artifacts.require("UbrisToken");
 
 module.exports = function(deployer) {
-  deployer.deploy(SimpleStorage);
-  deployer.deploy(TutorialToken);
-  deployer.deploy(ComplexStorage);
+  deployer.deploy(UbrisToken, 1000000);
 };
