@@ -36,7 +36,7 @@ contract UbrisToken is ERC20 {
     function stackIn(uint _amount) public {
         require(_amount > 0);
         require(balanceOf(msg.sender) >= _amount);
-        if (transferFrom(msg.sender, address(this), _amount)) {
+        if (this.transferFrom(msg.sender, address(this), _amount)) {
             StackedIn memory newStack = StackedIn(block.timestamp, _amount);
             stackedAmount[msg.sender].stack.push(newStack);
         }
